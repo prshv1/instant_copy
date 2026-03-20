@@ -4,11 +4,21 @@
   "version": "1.0.0",
   "description": "Copy the current page URL to your clipboard with a keyboard shortcut.",
   "permissions": ["tabs", "offscreen", "clipboardWrite"],
+  "icons": {
+    "16":  "Icons/icon16.png",
+    "48":  "Icons/icon48.png",
+    "128": "Icons/icon128.png"
+  },
   "background": {
     "service_worker": "background.js"
   },
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16":  "Icons/icon16.png",
+      "48":  "Icons/icon48.png",
+      "128": "Icons/icon128.png"
+    }
   },
   "commands": {
     "copy-current-url": {

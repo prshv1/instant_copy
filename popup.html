@@ -3,56 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <title>URL, Instant Copy</title>
-    <style>
-      body {
-        width: 280px;
-        margin: 0;
-        padding: 20px;
-        font-family: Arial, sans-serif;
-        background: #ffffff;
-        color: #111111;
-      }
-
-      h1 {
-        margin: 0 0 12px;
-        font-size: 18px;
-      }
-
-      p {
-        margin: 0 0 10px;
-        font-size: 14px;
-        line-height: 1.5;
-      }
-
-      a {
-        color: #2563eb;
-        text-decoration: none;
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
-
-      .hint {
-        color: #555555;
-      }
-    </style>
+    <link rel="stylesheet" href="popup.css" />
   </head>
   <body>
-    <h1>URL, Instant Copy</h1>
-    <p>
-      Press <strong>Option + Shift + C</strong> on Mac or
-      <strong>Alt + Shift + C</strong> on Windows to instantly copy the
-      current page URL to your clipboard.
+    <div class="popup-wrapper">
 
-      Built by
-      <a
-        href="https://linktr.ee/prshv1"
-        target="_blank"
-        rel="noreferrer noopener"
-      >
-        Parshva
-      </a>
-    </p>
+      <!-- Header -->
+      <div class="popup-header">
+        <span class="popup-tag">extension</span>
+        <span class="popup-version">v1.0</span>
+      </div>
+
+      <!-- Title -->
+      <div class="popup-title-row">
+        <img src="Icons/icon16.png" alt="" class="popup-icon" />
+        <h1>URL, Instant <span class="highlight">Copy</span></h1>
+      </div>
+
+      <!-- Description -->
+      <p>Instantly copies the current page URL to your clipboard.</p>
+
+      <!-- Keyboard Shortcuts -->
+      <div class="shortcuts">
+        <div class="kbd-row">
+          <span class="kbd-label">Mac</span>
+          <kbd>⌥ Option + ⇧ Shift + C</kbd>
+        </div>
+        <div class="kbd-row">
+          <span class="kbd-label">Windows</span>
+          <kbd>Alt + Shift + C</kbd>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="popup-footer">
+        <span>built by</span>
+        <a href="https://linktr.ee/prshv1" target="_blank" rel="noreferrer noopener">
+          Parshva ↗
+        </a>
+      </div>
+
+    </div>
   </body>
 </html>
