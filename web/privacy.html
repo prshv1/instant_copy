@@ -1,72 +1,158 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Privacy Policy - URL, Instant Copy</title>
-    <meta
-      name="description"
-      content="Privacy Policy for the URL, Instant Copy Chrome Extension."
+    <title>Privacy Policy — URL, Instant Copy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
     />
     <link rel="stylesheet" href="privacy.css" />
   </head>
   <body>
-    <main class="container">
-      <header>
-        <h1>Privacy Policy</h1>
-        <p class="subtitle">URL, Instant Copy</p>
-        <p class="last-updated">Last Updated: March 20, 2026</p>
-      </header>
+    <div class="noise"></div>
 
-      <section>
-        <h2>The Short Version</h2>
-        <p>
-          <strong>This extension does not collect, store, or transmit any of your personal data.</strong>
-          Everything happens locally on your machine.
+    <header class="header">
+      <a href="https://github.com/prshv1/instant_copy" class="back-link" target="_blank" rel="noreferrer noopener">
+        <span class="arrow">←</span> github.com/prshv1/instant_copy
+      </a>
+    </header>
+
+    <main class="main">
+      <div class="hero">
+        <div class="tag">PRIVACY POLICY</div>
+        <h1 class="title">We collect<br /><span class="highlight">nothing.</span></h1>
+        <p class="subtitle">
+          Because there's nothing to collect. This extension exists to copy a URL.
+          Full stop.
         </p>
+        <div class="meta">
+          <span>Effective: June 2025</span>
+          <span class="dot">·</span>
+          <span>URL, Instant Copy v1.0.0</span>
+        </div>
+      </div>
+
+      <div class="divider">
+        <span class="divider-line"></span>
+        <span class="divider-text">// the details</span>
+        <span class="divider-line"></span>
+      </div>
+
+      <section class="sections">
+
+        <article class="card">
+          <div class="card-index">01</div>
+          <div class="card-body">
+            <h2>Data Collection</h2>
+            <p>
+              Zero. Null. Nothing. This extension does not collect, store, transmit, or even
+              glance at any personal data, browsing history, or usage metrics. Not locally.
+              Not remotely. Not ever.
+            </p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-index">02</div>
+          <div class="card-body">
+            <h2>Permissions — What They Do</h2>
+            <p>Three permissions are declared in the manifest. Here's exactly why:</p>
+            <ul class="perm-list">
+              <li>
+                <code>tabs</code>
+                <span>Read the URL of the currently active tab — the one thing you asked us to copy.</span>
+              </li>
+              <li>
+                <code>offscreen</code>
+                <span>Spawn an offscreen document so the Clipboard API works inside a service worker context. Chrome requires this.</span>
+              </li>
+              <li>
+                <code>clipboardWrite</code>
+                <span>Write that URL to your clipboard. That's literally the whole feature.</span>
+              </li>
+            </ul>
+            <p class="note">No host permissions. No <code>storage</code>. No <code>identity</code>. No <code>webRequest</code>.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-index">03</div>
+          <div class="card-body">
+            <h2>Network Requests</h2>
+            <p>
+              The extension makes <strong>zero network requests</strong>. It has no server, no backend,
+              no analytics endpoint, no telemetry pipeline. There is no remote infrastructure.
+              The code runs entirely in your browser.
+            </p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-index">04</div>
+          <div class="card-body">
+            <h2>Third Parties</h2>
+            <p>
+              No third-party SDKs. No ad networks. No tracking pixels. No crash reporters.
+              No A/B testing frameworks. No dependency that could phone home. The entire
+              codebase is four files you can read in under five minutes.
+            </p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-index">05</div>
+          <div class="card-body">
+            <h2>Open Source</h2>
+            <p>
+              Don't take our word for it. The full source is public on GitHub. Every line.
+              Read it, audit it, fork it.
+            </p>
+            <a
+              href="https://github.com/prshv1/instant_copy"
+              class="gh-link"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              github.com/prshv1/instant_copy →
+            </a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-index">06</div>
+          <div class="card-body">
+            <h2>Changes to This Policy</h2>
+            <p>
+              If this policy ever changes (unlikely, given there's nothing to change),
+              the updated version will be committed to the repository with a clear diff.
+              The effective date above will be updated.
+            </p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-index">07</div>
+          <div class="card-body">
+            <h2>Contact</h2>
+            <p>
+              Questions? Open an issue on GitHub or reach out via
+              <a href="https://linktr.ee/prshv1" target="_blank" rel="noreferrer noopener">linktr.ee/prshv1</a>.
+            </p>
+          </div>
+        </article>
+
       </section>
 
-      <section>
-        <h2>Permissions Explained</h2>
-        <p>
-          To be completely transparent, here is exactly why the extension requests specific permissions:
-        </p>
-        <ul class="permissions-list">
-          <li>
-            <strong><code>tabs</code></strong>: Used strictly to read the URL of your currently active tab so it can be copied. We do not track your browsing history.
-          </li>
-          <li>
-            <strong><code>offscreen</code> & <code>clipboardWrite</code></strong>: Used together to temporarily open an invisible document that writes the URL directly to your system's clipboard.
-          </li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Third-Party Services</h2>
-        <p>
-          There are no third-party analytics, tracking scripts, or external servers connected to this extension. It operates entirely offline.
-        </p>
-      </section>
-
-      <section>
-        <h2>Open Source</h2>
-        <p>
-          Don't just take my word for it. The source code is completely public. You can review exactly how it works or report issues on GitHub:
-        </p>
-        <a
-          href="https://github.com/prshv1/instant_copy"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="github-link"
-        >
-          View Source on GitHub
-        </a>
-      </section>
-
-      <footer>
-        <p>
-          Built by <a href="https://linktr.ee/prshv1" target="_blank" rel="noopener noreferrer">Parshva</a>.
-        </p>
+      <footer class="footer">
+        <div class="footer-rule"></div>
+        <div class="footer-inner">
+          <span>Built by <a href="https://linktr.ee/prshv1" target="_blank" rel="noreferrer noopener">Parshva</a></span>
+          <span class="footer-badge">No data. No drama.</span>
+        </div>
       </footer>
     </main>
   </body>
